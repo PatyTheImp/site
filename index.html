@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./media/favicon.png" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comforter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Cat Collars</title>
+  </head>
+  <body>
+    <h1 class="title">Cat Collars</h1>
+    <div class="container">
+      <img
+        class="icon"
+        src="./media/under-construction.png"
+        alt="under-construction"
+      />
+      <p class="warning">Site em construção</p>
+    </div>
+
+    <!-- Background video -->
+    <div class="bg-video">
+      <video class="bg-video__content" autoplay muted loop>
+        <source src="./media/A kitten yawning.mp4" type="video/mp4" />
+        Your browser is not supported!
+      </video>
+    </div>
+
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .title {
+        font-family: "Comforter", cursive;
+        text-align: center;
+        padding-top: 40px;
+        font-size: 70px;
+      }
+
+      .title:hover {
+        text-shadow: 2px 2px orangered;
+      }
+
+      .icon {
+        width: 100px;
+      }
+
+      .warning {
+        font-size: 20px;
+        font-family: "Merriweather", serif;
+      }
+
+      .bg-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        filter: sepia(60%) opacity(40%);
+        overflow: hidden;
+      }
+
+      .bg-video__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+
+    <script>
+      document.querySelector("video").playbackRate = 0.5;
+    </script>
+  </body>
+</html>
